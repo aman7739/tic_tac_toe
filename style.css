@@ -1,0 +1,134 @@
+nav{
+    background: rgb(33, 40, 137);
+    color: white;
+    height: 50px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 45px;
+
+}
+
+nav ul{
+    list-style-type: none;
+
+}
+
+
+*{
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #98ba9c;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.turn-container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn-container h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.turn-container .turn-box{
+    border: 3px solid #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF2E63;
+    z-index: -1;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 40px auto;
+    
+}
+
+.box{
+    cursor: pointer;
+    font-size: 4rem;
+    font-weight: 700;
+    border: 4px solid #000;
+}
+
+/* box side line remove  */
+.box.X{
+    color: #cb0953;
+}
+.box.O{
+    color:#000000;
+}
+.box:nth-child(1),.box:nth-child(2),.box:nth-child(3){
+    border-top: none;
+}
+.box:nth-child(3n + 1){
+    border-left: none;
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(7),.box:nth-child(8),.box:nth-child(9){
+    border-bottom: none;
+}
+
+
+
+.box:hover{
+    background-color: #cf9426;
+}
+
+#play-again{
+    background-color: #FF2E63;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#play-again:hover{
+    padding: 10px 40px;
+    background-color: #55d908;
+    color: #000;
+}
